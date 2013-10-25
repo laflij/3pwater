@@ -1,0 +1,8 @@
+# Time-averaged data for fix msd
+# TimeStep Number-of-rows
+# Row c_msd
+50000 132.766
+100000 394.451
+150000 677.439
+200000 926.46
+250000 1192.4

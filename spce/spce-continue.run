@@ -1,0 +1,25 @@
+# SPC/E water box run continuation from restart file
+
+units		real	
+atom_style	full
+boundary        p p p
+kspace_style    pppm 1e-04
+
+read_restart    confout-OLDPART.data
+
+timestep	2.0
+neighbor        2.0 bin
+neigh_modify	every 1 delay 10 check yes
+
+fix		1 all shake 0.0001 20 0 b 1 a 1
+fix		2 all npt temp 300.0 300.0 100.0 iso 1.0 1.0 100.0
+
+thermo_style    custom step temp press vol pe ke evdwl ecoul epair 
+thermo		250
+
+dump            cxtc all xtc 250 traj-SIMPART.xtc
+
+restart         5000 state_cpt-*.data 
+
+run		250000
+write_restart   confout-SIMPART.data
