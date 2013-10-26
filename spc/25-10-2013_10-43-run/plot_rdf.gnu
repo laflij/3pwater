@@ -3,8 +3,8 @@
 
 set terminal cairolatex pdf size 6,3
 set style fill transparent solid 0.05 noborder
-#set output "~/Dropbox/MolecularSimulations/figures/rdf_nvt_npt.tex" 
-set output "rdf.tex"
+set output "~/Dropbox/MolecularSimulations/figures/rdf_spc_water.tex" 
+#set output "rdf.tex"
 
 # Line styles
 set border linewidth 1
@@ -38,8 +38,8 @@ set ylabel "$g(r)$" offset -2, 0
 # Set axis scaling
 set xr [0:10]
 #set yr [-2:1.5]
-set xtic auto                          # set xtics automatically
-set ytic auto                          # set ytics automatically
+set xtic 0.5                         # set xtics automatically
+set ytic auto                        # set ytics automatically
 
 # Set Grid
 set grid ytics lc rgb "#bbbbbb" lw 5 lt 0
