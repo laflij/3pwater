@@ -46,5 +46,5 @@ set grid ytics lc rgb "#bbbbbb" lw 5 lt 0
 set grid xtics lc rgb "#bbbbbb" lw 5 lt 0
 
 plot "rdf.xvg" using 2:3 title "OO" with lines ls 5, \
-     "rdf.xvg" using 4:5 title "OH" with lines ls 4, \
-     "rdf.xvg" using 6:7 title "HH" with lines ls 1
+     "rdf.xvg" using 2:5 title "OH" with lines ls 4, \
+     "rdf.xvg" using 2:7 title "HH" with lines ls 1
